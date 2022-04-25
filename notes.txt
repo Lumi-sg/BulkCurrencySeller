@@ -1,0 +1,52 @@
+﻿Item Class: Stackable Currency
+Rarity: Currency
+    Exalted Orb
+    --------
+Stack Size: 19 / 10
+    --------
+Augments a rare item with a new random modifier
+--------
+    Right click this item then left click a rare item to apply it. Rare items can have up to six random modifiers.
+    Shift click to unstack.
+
+
+
+	
+var poeNinjaData = blah;
+var exaltedOrbData = poeNinjaData.lines.FirstOrDefault(line => line.currencyTypeName == "Exalted Orb");
+if (exaltedOrbData == null) return;
+Console.WriteLine(exaltedOrbData.chaosEquivalent);
+
+
+
+
+
+
+using System.Net.Http.Json;
+
+var client = new HttpClient();
+
+var response = await client.GetFromJsonAsync<MyModel>("https://poe.ninja/api/data/currencyoverview?league=Archnemesis&type=Currency");
+
+foreach (var x in response.lines)
+{
+    Console.WriteLine(x.currencyTypeName);
+}
+
+var response = await client.GetFromJsonAsync<MyModel>($"https://poe.ninja/api/data/currencyoverview?league=Archnemesis&type={type}");
+
+
+
+Item Class: Incubators
+Rarity: Currency
+Obscured Incubator
+--------
+Stack Size: 1/10
+--------
+Item Level: 86
+--------
+Adds an incubated Breach item to an equippable item
+Item drops after killing 10,530 monsters
+--------
+Right click this item then left click an item to apply it. The Incubated item drops after killing a specific number of monsters.
+
