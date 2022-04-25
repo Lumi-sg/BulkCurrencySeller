@@ -37,12 +37,12 @@ namespace BulkCurrencySeller
                 if (!clipboardLines[0].Contains("Item Class: Stackable Currency"))
                 {
                     var invalidItemType = clipboardLines[2].Trim(); //grab invalid request
-                    AnsiConsole.MarkupLine($"\n[underline red3_1]Error:[/]\n\n[red3_1]{invalidItemType} is not a valid currency.\nI may provide support for more item types in the future.[/]");
+                    AnsiConsole.MarkupLine($"\n[underline red3_1]Error:[/]\n\n[red3_1]{invalidItemType} is not a valid currency.[/]");
                     Console.WriteLine("");
                 }
                 else if (clipboardLines[2].Contains("Chaos Orb") && !clipboardLines[2].Contains("Veiled") && !clipboardLines[2].Contains("Eldritch"))
                 {
-                    AnsiConsole.MarkupLine($"\n[underline red3_1]Error:[/]\n\n[red3_1]A Chaos Orb is worth one Chaos Orb dumb ass[/]");
+                    AnsiConsole.MarkupLine($"\n[underline red3_1]Error:[/]\n\n[green1]A Chaos Orb is worth one Chaos Orb.[/]");
                 }
                 else if (clipboardLines[2].Contains("Charged Compass"))
                 {
@@ -87,7 +87,7 @@ namespace BulkCurrencySeller
                         }
                         else
                         {   //poe ninja does not list certain currencies as currencies for some reason
-                            AnsiConsole.MarkupLine($"\n[underline red3_1]Error:[/]\n\n[red3_1]{invalidItemType} is not a valid currency.\nI may provide support for more item types in the future.[/]");
+                            AnsiConsole.MarkupLine($"\n[underline red3_1]Error:[/]\n\n[red3_1]{invalidItemType} is not a valid currency.[/]");
                         }
 
                     }
