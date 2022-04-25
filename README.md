@@ -3,6 +3,8 @@
 * Compile
 * Hover currency item in Path of Exile
 * Hit Ctrl+C
+* Put Currency in Public Stash Tab
+* Paste in BulkCurrencySeller's output
 * Become inundated with messages
 
 ## Preview:
