@@ -42,7 +42,7 @@ namespace BulkCurrencySeller
                 }
                 else if (clipboardLines[2].Contains("Chaos Orb") && !clipboardLines[2].Contains("Veiled") && !clipboardLines[2].Contains("Eldritch"))
                 {
-                    AnsiConsole.MarkupLine($"\n[underline red3_1]Error:[/]\n\n[red3_1]A Chaos Orb is worth one Chaos Orb dumb ass[/]");
+                    AnsiConsole.MarkupLine($"\n[underline red3_1]Error:[/]\n\n[green1]A Chaos Orb is worth one Chaos Orb.[/]");
                 }
                 else if (clipboardLines[2].Contains("Charged Compass"))
                 {
