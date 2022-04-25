@@ -84,7 +84,6 @@ namespace BulkCurrencySeller
                         {   //poe ninja does not list certain currencies as currencies for some reason
                             AnsiConsole.MarkupLine($"\n[underline red3_1]Error:[/]\n\n[red3_1]{playerCurrencyType} is not a valid currency.[/]");
                         }
-
                     }
                 }
             };// end of action which is basically one massive method
