@@ -9,8 +9,6 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Spectre.Console;
 
-
-
 namespace BulkCurrencySeller
 {
     public class Program
@@ -30,7 +28,6 @@ namespace BulkCurrencySeller
                     AnsiConsole.MarkupLine($"\n[underline red3_1]Error:[/]\n\n[red3_1]Invalid clipboard, did you accidentally copy a non PoE item?[/]");
                     return;
                 }
-
                 var clipboardLines = clipboard.Split('\n');
 
                 //shitty way of preventing errors (these are items not valid according to API)
@@ -51,9 +48,7 @@ namespace BulkCurrencySeller
                 else //if item is valid, continue
                 {
                     var playerCurrencyType = clipboardLines[2].Trim(); //grab currency type
-                    var invalidItemType = clipboardLines[2].Trim(); //grab invalid request
-
-                    string stackSizeString = clipboardLines[4].Replace(",", ""); //trim out comma because the following already regex took everything I had to give
+                    string stackSizeString = clipboardLines[4].Replace(",", ""); //trim out comma because the following regex already took everything I had to give
 
                     var regexSring = Regex.Match(stackSizeString, @"Stack Size: (\d*)/(\d*)").Groups[1].Value; //grab stack value from clipboard
                     var playerCurrencyAmount = int.Parse(regexSring);
@@ -87,7 +82,7 @@ namespace BulkCurrencySeller
                         }
                         else
                         {   //poe ninja does not list certain currencies as currencies for some reason
-                            AnsiConsole.MarkupLine($"\n[underline red3_1]Error:[/]\n\n[red3_1]{invalidItemType} is not a valid currency.[/]");
+                            AnsiConsole.MarkupLine($"\n[underline red3_1]Error:[/]\n\n[red3_1]{playerCurrencyType} is not a valid currency.[/]");
                         }
 
                     }
