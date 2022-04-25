@@ -16,7 +16,4 @@ namespace BulkCurrencySeller
 
         public double chaosEquivalent { get; set; }
     }
-
-
-    
 }
