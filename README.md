@@ -13,5 +13,6 @@
 
 ## Credits:
 
-Poe.Ninja - for the api
-VfA/Riviere - for teaching me half the concepts in this project and for essentially rewriting the code.
+* VfA/Riviere - for teaching me half the concepts in this project.
+* Poe.Ninja - for the api.
+* PoE Dev Community - For providing amazing tools and making the game playable at no cost to the players.
